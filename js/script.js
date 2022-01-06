@@ -6,10 +6,12 @@ const remainingGuess = document.querySelector(".remaining");
 const span = document.querySelector("span");
 const message = document.querySelector(".message");
 const hiddenButton = document.querySelector(".play-again hide");
-const word = ["m", "a", "g", "n", "o", "l", "i", "a"];
+const word = "magnolia";
 
 const lettersUnkown = function () {
-  wordInProgress.innerText = "●";
+  for (const letters of lettersUnkown) {
+    wordInProgress.innerText = "●";
+    lettersUnkown.push(`${letters}`); 
 };
 
 lettersUnkown(word.join(""));
