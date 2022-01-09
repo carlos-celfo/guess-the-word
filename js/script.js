@@ -8,10 +8,14 @@ const message = document.querySelector(".message");
 const hiddenButton = document.querySelector(".play-again hide");
 const word = "magnolia";
 
+// Placeholders for the words with ● //
 const lettersUnkown = function () {
-  for (const letters of lettersUnkown) {
-    wordInProgress.innerText = "●";
-    lettersUnkown.push(`${letters}`); 
+  const dotArray = [];
+  for (const letter of word) {
+    dotArray.push("●");
+  }
+  console.log(dotArray);
+  wordInProgress.innerText = dotArray.join("");
 };
 
-lettersUnkown(word.join(""));
+lettersUnkown(word);
