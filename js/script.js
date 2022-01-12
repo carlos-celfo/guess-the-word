@@ -28,3 +28,5 @@ buttonGuess.addEventListener("click", function (e) {
   console.log(guess);
   letterInput.value = "";
 });
+
+// Create a Function to Check Player’s Input //
