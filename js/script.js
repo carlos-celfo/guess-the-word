@@ -30,4 +30,10 @@ buttonGuess.addEventListener("click", function (e) {
 });
 
 // Create a Function to Check Player’s Input //
-// more test//
+
+const inputValidation = function (letterInput) {
+  const acceptedLetter = /[a-zA-Z]/;
+  if () {
+    
+  }
+};
