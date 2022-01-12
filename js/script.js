@@ -30,3 +30,4 @@ buttonGuess.addEventListener("click", function (e) {
 });
 
 // Create a Function to Check Player’s Input //
+// more test//
