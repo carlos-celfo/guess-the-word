@@ -1,0 +1,107 @@
+[33mcommit 888300b92470ed1482725bdfaa533fb852ad6a24[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: carlos-celfo <cagelvis.pt@gmail.com>
+Date:   Wed Jan 12 18:59:34 2022 +0000
+
+    Green dot tryout
+
+[33mcommit 2b79812d93a6482843665fe59f388dbdeb1fd93e[m
+Author: carlos-celfo <cagelvis.pt@gmail.com>
+Date:   Tue Jan 11 22:12:11 2022 +0000
+
+    Event listener for the button added
+
+[33mcommit b40fa17faa79c90c06c29fe17a30b69db785e54e[m
+Author: carlos-celfo <cagelvis.pt@gmail.com>
+Date:   Sun Jan 9 21:39:47 2022 +0000
+
+    Function of placeholders finished
+
+[33mcommit 9dbfe3580c05d4d8934b7424fc9d74b21dbc0979[m
+Author: carlos-celfo <cagelvis.pt@gmail.com>
+Date:   Thu Jan 6 22:20:10 2022 +0000
+
+    Second attempt to loop over the word
+
+[33mcommit d44950a6c33d052fbdb3883665dc46a638b970c1[m
+Author: carlos-celfo <cagelvis.pt@gmail.com>
+Date:   Wed Jan 5 22:56:33 2022 +0000
+
+    First function, not working still
+
+[33mcommit 4bbe995b2bffd4145e3486485db4b2b50e6fdddf[m
+Author: carlos-celfo <cagelvis.pt@gmail.com>
+Date:   Wed Jan 5 20:43:31 2022 +0000
+
+    First exercise, declaring variables
+
+[33mcommit e3748abbb011cabfd371eb78428f66cd1a3f90d8[m
+Author: Ann Cascarano <4411121+redrambles@users.noreply.github.com>
+Date:   Wed Aug 25 12:03:19 2021 -0400
+
+    Small markup fix
+
+[33mcommit d71f9f37c6d03c0dd4c7a1d90efc56ec0c854733[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Mon Apr 26 09:47:18 2021 -0400
+
+    Remove duplicate input attribute
+
+[33mcommit a55f4f931d6ba7f5a7789e520cd46d6f26c567bd[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Thu Mar 18 15:03:35 2021 -0400
+
+    Updated styles and small fixes
+
+[33mcommit 36c458315e8e95727a3ee0ec8b8f31282861bcb3[m
+Author: Nichole M <nichole@skillcrush.com>
+Date:   Tue Mar 16 16:55:22 2021 -0400
+
+    Alphabetized word list and remove 11+ letter words
+
+[33mcommit 5720ba8800268c17646c1832f24784e6396242b5[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Fri Mar 12 10:49:47 2021 -0500
+
+    Update .gitignore
+
+[33mcommit ce24004b20e4a5b8aecf81d12253f50a79344f8d[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Fri Mar 5 15:10:22 2021 -0500
+
+    Starter files
+
+[33mcommit 8c18ffd2b8ff73985bbd1b91cd897c14cf101071[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Sat Feb 20 16:12:18 2021 -0500
+
+    Improve StartOver functionality
+
+[33mcommit 58312cde95b06d68a75ee97cd659010cbece4e09[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Sat Feb 20 14:53:22 2021 -0500
+
+    Add Try Again button and functionality
+
+[33mcommit 3f5439aa889f293c0f2d76cfce8f28c1dd9a279a[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Fri Feb 19 21:00:56 2021 -0500
+
+    Improve guessed letters display and logic
+
+[33mcommit 12f479a5857f5c4b64e6cd46f3410ae718eb6871[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Fri Feb 19 16:52:40 2021 -0500
+
+    Function expressions are nice
+
+[33mcommit 03b02224f1e11c3b88ab3480217ba97899a8e4f9[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Fri Feb 19 16:41:23 2021 -0500
+
+    Few fixes
+
+[33mcommit 8b804cccac7e56b5a7a0106e0ecfb52a97902993[m
+Author: Ann Cascarano <a.cascarano@gmail.com>
+Date:   Fri Feb 19 16:02:35 2021 -0500
+
+    Initial commit
