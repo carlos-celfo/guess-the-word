@@ -33,7 +33,12 @@ buttonGuess.addEventListener("click", function (e) {
 
 const inputValidation = function (letterInput) {
   const acceptedLetter = /[a-zA-Z]/;
-  if () {
-    
-  }
+  if (letterInput == null) {
+    message.innerText = "You need to add a letter!";
+  } else if (letterInput > 1) { //weird question!// 
+    message.innerText = "Only add one letter!";
+  } else (letterInput != acceptedLetter.match(letterInput)) {
+    message.innerText = "You need to add a letter, not number or symbol!";
+  };
+  return letterInput;
 };
