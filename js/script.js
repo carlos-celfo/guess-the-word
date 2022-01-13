@@ -1,4 +1,4 @@
-const guessedLetters = document.querySelector(".guessed-letters");
+const shownLetters = document.querySelector(".guessed-letters");
 const buttonGuess = document.querySelector(".guess");
 const letterInput = document.querySelector(".letter");
 const wordInProgress = document.querySelector(".word-in-progress");
@@ -7,6 +7,7 @@ const span = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
 const hiddenButton = document.querySelector(".play-again");
 const word = "magnolia";
+const guessedLetters = [];
 
 // Placeholders for the words with ● //
 const lettersUnkown = function () {
@@ -25,20 +26,25 @@ lettersUnkown(word);
 buttonGuess.addEventListener("click", function (e) {
   e.preventDefault();
   const guess = letterInput.value;
-  console.log(guess);
+  console.log(inputValidation(guess));
   letterInput.value = "";
+  inputValidation(guess);
 });
 
 // Create a Function to Check Player’s Input //
 
-const inputValidation = function (letterInput) {
+const inputValidation = function (guess) {
   const acceptedLetter = /[a-zA-Z]/;
-  if (letterInput == null) {
+  if (guess.length === 0) {
     message.innerText = "You need to add a letter!";
-  } else if (letterInput > 1) { //weird question!// 
+  } else if (guess.length > 1) {
     message.innerText = "Only add one letter!";
-  } else (letterInput != acceptedLetter.match(letterInput)) {
+  } else if (guess != guess.match(acceptedLetter)) {
     message.innerText = "You need to add a letter, not number or symbol!";
-  };
-  return letterInput;
+  }
+  return guess;
 };
+
+// Function to capture input //
+
+const makeGuess = function (letter) {};
