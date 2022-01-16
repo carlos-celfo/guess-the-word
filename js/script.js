@@ -27,7 +27,7 @@ buttonGuess.addEventListener("click", function (e) {
   e.preventDefault();
   message.innerText = "";
   const guess = letterInput.value;
-  const goodGuess = inputValidtation(guess);
+  const goodGuess = inputValidation(guess);
   if (goodGuess) {
     makeGuess(guess);
   }
@@ -44,8 +44,9 @@ const inputValidation = function (guess) {
     message.innerText = "Only add one letter!";
   } else if (guess != guess.match(acceptedLetter)) {
     message.innerText = "You need to add a letter, not number or symbol!";
+  } else {
+    return guess;
   }
-  return guess;
 };
 
 // Function to capture input //
