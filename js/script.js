@@ -10,7 +10,7 @@ const word = "magnolia";
 const guessedLetters = [];
 
 // Placeholders for the words with ● //
-const lettersUnkown = function () {
+const lettersUnkown = function (word) {
   const dotArray = [];
   for (const letter of word) {
     dotArray.push("●");
@@ -25,10 +25,13 @@ lettersUnkown(word);
 
 buttonGuess.addEventListener("click", function (e) {
   e.preventDefault();
+  message.innerText = "";
   const guess = letterInput.value;
-  console.log(inputValidation(guess));
+  const goodGuess = inputValidtation(guess);
+  if (goodGuess) {
+    makeGuess(guess);
+  }
   letterInput.value = "";
-  inputValidation(guess);
 });
 
 // Create a Function to Check Player’s Input //
@@ -47,4 +50,12 @@ const inputValidation = function (guess) {
 
 // Function to capture input //
 
-const makeGuess = function (letter) {};
+const makeGuess = function (guess) {
+  guess = guess.toUpperCase();
+  if (guessedLetters.includes(guess)) {
+    message.innerText = "You already guessed that letter, try again!";
+  } else {
+    guessedLetters.push(guess);
+    console.log(guessedLetters);
+  }
+};
