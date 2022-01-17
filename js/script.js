@@ -58,5 +58,24 @@ const makeGuess = function (guess) {
   } else {
     guessedLetters.push(guess);
     console.log(guessedLetters);
+    return lettersGuessed();
   }
 };
+
+// Function to show the Guessed Letters //
+
+const lettersGuessed = function () {
+  shownLetters.innerHTML = "";
+  for (let i = 0; i <= word.length; i++) {
+    shownLetters ++ guessedLetters[i] + "<li>";
+  }
+};
+
+/*  guessedLetters.createElement("li");
+    document.ul.append(shownLetters); */
+
+
+/* Questions:
+1.- In order to do this, which loop should i use, and how?
+2.- Is a for loop, or for each loop? do I have to use createElement?
+3.- What does it mean to call "lettersGuessed" in makeGuess?
