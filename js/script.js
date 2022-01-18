@@ -58,7 +58,8 @@ const makeGuess = function (guess) {
   } else {
     guessedLetters.push(guess);
     console.log(guessedLetters);
-    return lettersGuessed();
+    lettersGuessed();
+    updatedWord(guessedLetters);
   }
 };
 
@@ -66,16 +67,24 @@ const makeGuess = function (guess) {
 
 const lettersGuessed = function () {
   shownLetters.innerHTML = "";
-  for (let i = 0; i <= word.length; i++) {
-    shownLetters ++ guessedLetters[i] + "<li>";
+  for (const letter of guessedLetters) {
+    const li = document.createElement("li");
+    li.innerText = letter;
+    shownLetters.append(li);
   }
 };
 
-/*  guessedLetters.createElement("li");
-    document.ul.append(shownLetters); */
+// Function to Update the word in progress //
 
+const updatedWord = function (guessedLetters) {
+  const wordUpper = word.toUpperCase();
+  const wordArray = wordUpper.split("");
+  console.log(wordArray);
+  if (wordArray.includes(guessedLetters)) {
+    const updatedLetters = [wordArray];
+    lettersUnkown(updatedLetters.join());
+  }
+};
 
-/* Questions:
-1.- In order to do this, which loop should i use, and how?
-2.- Is a for loop, or for each loop? do I have to use createElement?
-3.- What does it mean to call "lettersGuessed" in makeGuess?
+// maybe .concat() ??? //
+//updatedLetters.concat(guessedLetters);//
