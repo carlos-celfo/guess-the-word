@@ -79,12 +79,20 @@ const lettersGuessed = function () {
 const updatedWord = function (guessedLetters) {
   const wordUpper = word.toUpperCase();
   const wordArray = wordUpper.split("");
-  console.log(wordArray);
+  const wordReveal = [];
+  for (const letter of wordArray) {
+    if (wordArray.includes(letter)) {
+      wordReveal.push(letter);
+    } else {
+      wordReveal.push("●");
+    }
+  }
+  const shownLetters = wordReveal.join();
+};
+
+/* console.log(wordArray);
   if (wordArray.includes(guessedLetters)) {
     const updatedLetters = [wordArray];
     lettersUnkown(updatedLetters.join());
   }
-};
-
-// maybe .concat() ??? //
-//updatedLetters.concat(guessedLetters);//
+}; */
