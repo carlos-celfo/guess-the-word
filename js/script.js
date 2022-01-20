@@ -81,19 +81,11 @@ const updatedWord = function (guessedLetters) {
   const wordArray = wordUpper.split("");
   const wordReveal = [];
   for (const letter of wordArray) {
-    if (wordArray.includes(letter)) {
-      wordReveal.push(letter);
+    if (wordArray.includes(guessedLetters)) {
+      wordReveal.push(guessedLetters);
     } else {
       wordReveal.push("●");
     }
+    wordInProgress.innerText = wordReveal.join("");
   }
-  const lettersUnkown = wordReveal.join();
-  //Im not sure how to use wordReveal.join() and put it in the screen. Im Using the lettersUnkown function, but I also thought of using the shownLetters variable. //
 };
-
-/* console.log(wordArray);
-  if (wordArray.includes(guessedLetters)) {
-    const updatedLetters = [wordArray];
-    lettersUnkown(updatedLetters.join());
-  }
-}; */
