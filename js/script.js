@@ -81,11 +81,23 @@ const updatedWord = function (guessedLetters) {
   const wordArray = wordUpper.split("");
   const wordReveal = [];
   for (const letter of wordArray) {
-    if (wordArray.includes(guessedLetters)) {
-      wordReveal.push(guessedLetters);
+    if (guessedLetters.includes(letter)) {
+      wordReveal.push(letter.toUpperCase());
     } else {
       wordReveal.push("●");
     }
     wordInProgress.innerText = wordReveal.join("");
+  }
+  successfullGuess();
+};
+
+// Function to check if the player won //
+
+const successfullGuess = function () {
+  if (wordInProgress.innerText === word.toUpperCase()) {
+    message.classList.add("win");
+    message.innerHTML = `
+      <p class="highlight">You guessed correct the word! Congrats!</p>
+      `;
   }
 };
