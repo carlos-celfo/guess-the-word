@@ -10,6 +10,7 @@ let word = "magnolia";
 const guessedLetters = [];
 let remainingGuesses = 8;
 
+// Function to add random word //
 const getWord = async function () {
   const wordRequest = await fetch(
     "https://gist.githubusercontent.com/skillcrush-curriculum/7061f1d4d3d5bfe47efbfbcfe42bf57e/raw/5ffc447694486e7dea686f34a6c085ae371b43fe/words.txt"
@@ -136,3 +137,21 @@ const successfullGuess = function () {
       `;
   }
 };
+
+// Function to hide and show elements //
+
+const startOver = function () {
+  if (successfullGuess) {
+  document.getElementsByClassName(guess remaining guessedLetters).style.visibility = "hidden";
+  document.getElementsByClassName(play-again).style.visibility = "visible";
+} else {
+  document.getElementsByClassName(guess remaining guessedLetters).style.visibility = "visible";
+}
+startOver();
+};
+
+
+
+/* 
+1.- Function of count guesses, why creating a new array?
+2.- 
