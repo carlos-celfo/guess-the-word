@@ -8,6 +8,7 @@ const message = document.querySelector(".message");
 const hiddenButton = document.querySelector(".play-again");
 const word = "magnolia";
 const guessedLetters = [];
+let remainingGuesses = 8;
 
 // Placeholders for the words with ● //
 const lettersUnkown = function (word) {
@@ -59,6 +60,7 @@ const makeGuess = function (guess) {
     guessedLetters.push(guess);
     console.log(guessedLetters);
     lettersGuessed();
+    remaining(guess);
     updatedWord(guessedLetters);
   }
 };
@@ -89,6 +91,25 @@ const updatedWord = function (guessedLetters) {
     wordInProgress.innerText = wordReveal.join("");
   }
   successfullGuess();
+};
+
+// Function to count guesses remaining //
+
+const remaining = function (guess) {
+  const upperWord = word.toUpperCase(); // why does this new var???//
+  if (upperWord.includes(guess)) {
+    message.innerText = `Good guess, the word has the letter ${guess}`;
+  } else {
+    remainingGuesses -= 1;
+    message.innerText = `The word doesn't include ${guess}`;
+  }
+  if (remainingGuesses === 0) {
+    message.innerHTML = `Game over! the word was <span class="highlight">${word}</span>.`;
+  } else if (remainingGuesses === 1) {
+    span.innerText = `${remainingGuesses} guess`;
+  } else {
+    span.innerText = `${remainingGuesses} guesses`;
+  }
 };
 
 // Function to check if the player won //
