@@ -77,6 +77,7 @@ const makeGuess = function (guess) {
     lettersGuessed();
     remaining(guess);
     updatedWord(guessedLetters);
+    startOver();
   }
 };
 
@@ -111,7 +112,7 @@ const updatedWord = function (guessedLetters) {
 // Function to count guesses remaining //
 
 const remaining = function (guess) {
-  const upperWord = word.toUpperCase(); // why does this new var???//
+  const upperWord = word.toUpperCase();
   if (upperWord.includes(guess)) {
     message.innerText = `Good guess, the word has the letter ${guess}`;
   } else {
@@ -139,19 +140,19 @@ const successfullGuess = function () {
 };
 
 // Function to hide and show elements //
-
+/*
 const startOver = function () {
-  if (successfullGuess) {
   document.getElementsByClassName(guess remaining guessedLetters).style.visibility = "hidden";
   document.getElementsByClassName(play-again).style.visibility = "visible";
-} else {
   document.getElementsByClassName(guess remaining guessedLetters).style.visibility = "visible";
-}
+
 startOver();
 };
+*/
 
-
-
-/* 
-1.- Function of count guesses, why creating a new array?
-2.- 
+const startOver = function () {
+  buttonGuess.classList.add("hide");
+  remainingGuess.classList.add("hide");
+  guessedLetters.classList.add("hide");
+  hiddenButton.classList.add("hide");
+};
