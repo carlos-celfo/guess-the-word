@@ -137,7 +137,6 @@ const successfullGuess = function () {
     message.innerHTML = `
       <p class="highlight">You guessed correct the word! Congrats!</p>
       `;
-
     startOver();
   }
 };
@@ -177,3 +176,10 @@ hiddenButton.addEventListener("click", function () {
 
   getWord();
 });
+
+/* letterInput.classList.add("hide")
+Element.removeAttribute()
+
+
+
+*/
