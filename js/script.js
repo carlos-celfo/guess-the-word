@@ -7,7 +7,7 @@ const span = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
 const hiddenButton = document.querySelector(".play-again");
 let word = "magnolia";
-const guessedLetters = [];
+let guessedLetters = [];
 let remainingGuesses = 8;
 
 // Function to add random word //
@@ -16,6 +16,7 @@ const getWord = async function () {
     "https://gist.githubusercontent.com/skillcrush-curriculum/7061f1d4d3d5bfe47efbfbcfe42bf57e/raw/5ffc447694486e7dea686f34a6c085ae371b43fe/words.txt"
   );
   const wordsRequested = await wordRequest.text();
+  console.log(wordsRequested);
   const wordArray = wordsRequested.split("\n");
   console.log(wordArray);
   const randomIndex = Math.floor(Math.random() * wordArray.length);
@@ -161,20 +162,18 @@ const startOver = function () {
 
 // Function to make the Play Again button works //
 
-hiddenButton.addEventListener("click", function (e) {
-  e.preventDefault();
+hiddenButton.addEventListener("click", function () {
   message.classList.remove("win");
-  message.innerText = "";
   shownLetters.innerText = "";
-  remaining() = 5;
-  const guessedLetters = [];
-  message.innerText = `Good guess, the word has the letter ${guess}`;
+  message.innerText = "";
+  remainingGuesses = 5;
+  guessedLetters = [];
+  wordInProgress.innerText = "";
+  span.innerText = `${remainingGuesses} guesses`;
+  buttonGuess.classList.remove("hide");
+  remainingGuess.classList.remove("hide");
+  shownLetters.classList.remove("hide");
+  hiddenButton.classList.add("hide");
 
-
-  const guess = letterInput.value;
-  const goodGuess = inputValidation(guess);
-  if (goodGuess) {
-    makeGuess(guess);
-  }
-  letterInput.value = "";
+  getWord();
 });
