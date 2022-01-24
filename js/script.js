@@ -77,7 +77,6 @@ const makeGuess = function (guess) {
     lettersGuessed();
     remaining(guess);
     updatedWord(guessedLetters);
-    startOver();
   }
 };
 
@@ -121,6 +120,7 @@ const remaining = function (guess) {
   }
   if (remainingGuesses === 0) {
     message.innerHTML = `Game over! the word was <span class="highlight">${word}</span>.`;
+    startOver();
   } else if (remainingGuesses === 1) {
     span.innerText = `${remainingGuesses} guess`;
   } else {
@@ -136,6 +136,8 @@ const successfullGuess = function () {
     message.innerHTML = `
       <p class="highlight">You guessed correct the word! Congrats!</p>
       `;
+
+    startOver();
   }
 };
 
@@ -153,6 +155,26 @@ startOver();
 const startOver = function () {
   buttonGuess.classList.add("hide");
   remainingGuess.classList.add("hide");
-  guessedLetters.classList.add("hide");
-  hiddenButton.classList.add("hide");
+  shownLetters.classList.add("hide");
+  hiddenButton.classList.remove("hide");
 };
+
+// Function to make the Play Again button works //
+
+hiddenButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  message.classList.remove("win");
+  message.innerText = "";
+  shownLetters.innerText = "";
+  remaining() = 5;
+  const guessedLetters = [];
+  message.innerText = `Good guess, the word has the letter ${guess}`;
+
+
+  const guess = letterInput.value;
+  const goodGuess = inputValidation(guess);
+  if (goodGuess) {
+    makeGuess(guess);
+  }
+  letterInput.value = "";
+});
